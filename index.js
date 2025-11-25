@@ -37,6 +37,13 @@ async function run() {
          res.send(result);
      })
 
+     app.get('/few', async(req,res)=>{
+
+        const result = await movieCollection.find().limit(6).toArray()
+         res.send(result);
+     })
+
+
       app.get('/movies/:id', async(req,res) =>{
       const {id} = req.params
     //   console.log(id);
@@ -91,7 +98,7 @@ async function run() {
     
 
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
+    // await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
