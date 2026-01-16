@@ -1,6 +1,6 @@
-MovieMaster Pro
+##MovieMaster Pro
 
-Description:
+##Description:
 A full-stack web application for managing your personal movie collection. Built with Next.js, MongoDB and Tailwind CSS.
 
 ## ✨ Key Features
